@@ -20,7 +20,7 @@ Workshop highlights:
 
 ### **Step 1** -- Clone or download repository
 
-* `git clone https://github.com/Snowflake-Labs/snowpark-python-demos` OR `git clone git@github.com:sfc-gh-sreed/snowpark-ml-demo.git` 
+* `git clone https://github.com/sfc-gh-sreed/snowpark-ml-demo` OR `git clone git@github.com:sfc-gh-sreed/snowpark-ml-demo.git` 
 
 * `cd Advertising-Spend-ROI-Prediction`
 
