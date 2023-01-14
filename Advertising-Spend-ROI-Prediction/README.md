@@ -1,10 +1,10 @@
 # Advertising Spend and ROI Prediction
 
-This is the same demo that was presented during the [Snowflake Summit Opening Keynote](https://events.snowflake.com/summit/agenda/session/849836). It is built using Snowpark For Python and Streamlit. For questions and feedback, please reach out to <dash.desai@snowflake.com>.
+This demo was presented during the [Snowflake Summit Opening Keynote](https://events.snowflake.com/summit/agenda/session/849836). It is built using Snowpark For Python.
 
 ## Overview
 
-In this workshop, we will train a Linear Regression model to predict future ROI (Return On Investment) of variable advertising spend budgets across multiple channels including search, video, social media, and email using Snowpark for Python and scikit-learn. By the end of the session, you will have an interactive web application deployed visualizing the ROI of different allocated advertising spend budgets. NOTE: The accompanying slides can be found [here](https://github.com/Snowflake-Labs/snowpark-python-demos/blob/77f54633f850c66053dfa055c82a7fc6dec8deca/Advertising-Spend-ROI-Prediction/Snowpark%20for%20Python%20And%20Streamlit%20ML%20Workshop.pdf).
+In this workshop, we will train a Linear Regression model to predict future ROI (Return On Investment) of variable advertising spend budgets across multiple channels including search, video, social media, and email using Snowpark for Python and scikit-learn.
 
 Workshop highlights:
 
@@ -14,7 +14,6 @@ Workshop highlights:
 * Deploy ML model training code on Snowflake using Python Stored Procedure
 * Create and register Scalar and Vectorized Python User-Defined Functions (UDFs) for inference
 * Create Snowflake Task to automate (re)training of the model
-* Create Streamlit web application that uses the Scalar UDF for real-time inference on new data points based on user input
 
 If all goes well, you should see the following app in your browser window.
 
@@ -22,11 +21,6 @@ https://user-images.githubusercontent.com/1723932/175127637-9149b9f3-e12a-4acd-a
 
 ## Prerequisites
 
-* [Snowflake account](https://signup.snowflake.com/)
-  * Login to your [Snowflake account](https://app.snowflake.com/) with the admin credentials that were created with the account in one browser tab (a role with ORGADMIN privileges). Keep this tab open during the workshop.
-    * Click on the **Billing** on the left side panel
-    * Click on [Terms and Billing](https://app.snowflake.com/terms-and-billing)
-    * Read and accept terms to continue with the workshop
   * As ACCOUNTADMIN role
     * Create a [Warehouse](https://docs.snowflake.com/en/sql-reference/sql/create-warehouse.html), a [Database](https://docs.snowflake.com/en/sql-reference/sql/create-database.html) and a [Schema](https://docs.snowflake.com/en/sql-reference/sql/create-schema.html)
 
@@ -109,9 +103,9 @@ https://user-images.githubusercontent.com/1723932/175127637-9149b9f3-e12a-4acd-a
   CREATE OR REPLACE STAGE dash_udfs;
   ```
 
-## Notebook and Streamlit App
+## Notebook
 
-### **Step 1** -- Clone Repo
+### **Step 1** -- Clone or download repository
 
 * `git clone https://github.com/Snowflake-Labs/snowpark-python-demos` OR `git clone git@github.com:Snowflake-Labs/snowpark-python-demos.git`
 
@@ -128,9 +122,9 @@ https://conda.io/miniconda.html. OR, you may use any other Python environment wi
 
 ### **Step 3** -- Install Snowpark for Python, Streamlit and other libraries in Conda environment
 
-* `conda install -c https://repo.anaconda.com/pkgs/snowflake snowflake-snowpark-python pandas notebook scikit-learn cachetools streamlit`
+* `conda install -c https://repo.anaconda.com/pkgs/snowflake snowflake-snowpark-python pandas notebook scikit-learn cachetools`
 
-### **Step 4** -- Update [connection.json](connection.json) with your Snowflake account details and credentials
+### **Step 4** -- Update [connection.json](connection.json) with your Snowflake account details and credentials. Use the same database, schema, and warehouse that is provided. 
 
 * Note: For the **account** parameter, specify your [account identifier](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html) and do not include the snowflakecomputing.com domain name. Snowflake automatically appends this when creating the connection.
 
@@ -149,11 +143,3 @@ The notebook does the following...
 * Creates Scalar and Vectorized User-Defined Functions (UDFs) that use the model for inference on new data points passed in as parameters
   * Note: The Scalar UDF is called from the below Streamlit app for real-time inference on new budget allocations based on user input
 * Creates a Snowflake Task to automate (re)training of the model
-
-### **Step 6** -- Run Streamlit app
-
-* In a terminal window, browse to this folder where you have this file downloaded and run the [Streamlit app](Snowpark_Streamlit_Revenue_Prediction.py) by executing `streamlit run Snowpark_Streamlit_Revenue_Prediction.py`
-
-* If all goes well, you should see the following app in your browser window.
-
-https://user-images.githubusercontent.com/1723932/175127637-9149b9f3-e12a-4acd-a271-4650c47d8e34.mp4
