@@ -1,8 +1,4 @@
-# Snowpark For Python Demos
-
-This repository provides various demos/examples of using Snowpark for Python. Please navigate to each of the subfolders to learn more about a specific demo/example.
-
-## Snowpark For Python Overview
+# Snowpark For Python Overview
 
 The Snowpark for Python library provides intuitive API for querying and processing data using DataFrames. Using this library, you can build applications that process data in Snowflake without having to first move data out of Snowflake. The library also enables data application developers to run complex transformations within Snowflake (using User-Defined Functions, User-Defined Table Functions, and Stored Procedures) while taking advantage of the built-in unlimited scalability, performance, governance and security features.
 
