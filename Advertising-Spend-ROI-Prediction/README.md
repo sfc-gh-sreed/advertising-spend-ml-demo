@@ -45,6 +45,7 @@ https://conda.io/miniconda.html. OR, you may use any other Python environment wi
 
 * In a terminal window, browse to the folder where you have this Notebook downloaded and run `jupyter notebook` at the command line
 * Open and run through the [Jupyter notebook](Snowpark_For_Python.ipynb)
+* As you go through the exercises, refer to [this notebook](Snowpark_For_Python_Solution.ipynb) for the answers
   * Note: Make sure the Jupyter notebook (Python) kernel is set to ***snowpark***
 
 The notebook does the following...
