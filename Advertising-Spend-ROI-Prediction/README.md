@@ -1,6 +1,6 @@
 # Advertising Spend and ROI Prediction
 
-This demo was presented during the [Snowflake Summit Opening Keynote](https://events.snowflake.com/summit/agenda/session/849836). It is built using Snowpark For Python.
+The source content for this demo was presented during the [Snowflake Summit Opening Keynote](https://events.snowflake.com/summit/agenda/session/849836). It is built using Snowpark For Python. It has been modified slightly for the purposes of this workshop.
 
 ## Overview
 
@@ -44,15 +44,6 @@ https://conda.io/miniconda.html. OR, you may use any other Python environment wi
 ### **Step 5** -- Train & deploy ML model
 
 * In a terminal window, browse to the folder where you have this Notebook downloaded and run `jupyter notebook` at the command line
-* Open and run through the [Jupyter notebook](Snowpark_For_Python.ipynb)
+* Open and run through the [Snowpark_For_Python.ipynb](Snowpark_For_Python.ipynb) notebook
+* As you go through the exercises, refer to the [Snowpark_For_Python_Solution.ipynb](Snowpark_For_Python_Solution.ipynb) notebook for the answers
   * Note: Make sure the Jupyter notebook (Python) kernel is set to ***snowpark***
-
-The notebook does the following...
-
-* Performs Exploratory Data Analysis (EDA)
-* Creates features for training a model and writes them to a Snowflake table
-* Creates a Stored Proc for training a ML model and uploads the model to a Snowflake stage
-* Calls the Stored Proc to train the model
-* Creates Scalar and Vectorized User-Defined Functions (UDFs) that use the model for inference on new data points passed in as parameters
-  * Note: The Scalar UDF is called from the below Streamlit app for real-time inference on new budget allocations based on user input
-* Creates a Snowflake Task to automate (re)training of the model
