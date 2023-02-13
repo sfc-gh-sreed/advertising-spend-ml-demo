@@ -1,7 +1,7 @@
 {
   "account"   : "",
   "user"      : "",
-  "authenticator"  : "externalbrowser",
+  "password"  : "",
   "role"      : "",
   "warehouse" : "",
   "database"  : "",
